@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36429.23 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaCompressor.API", "ImgCompressor\MediaCompressor.API.csproj", "{B85B676A-C3F2-4791-A546-685260815721}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaCompressor.Application", "MediaCompressor.Application\MediaCompressor.Application.csproj", "{80079B81-85CB-4A72-B198-CCB820C329B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaCompressor.Core", "MediaCompressor.Core\MediaCompressor.Core.csproj", "{48445152-822A-4D60-BE4C-8213CD412D5C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaCompressor.Tests.Unit", "MediaCompressor.Tests.Unit\MediaCompressor.Tests.Unit.csproj", "{C370B7EB-A400-47DF-946D-52B7B1B23335}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaCompressor.Tests.Integration", "MediaCompressor.Tests.Integration\MediaCompressor.Tests.Integration.csproj", "{F8745FE5-9012-4C52-A2D3-529265B6E9A7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B85B676A-C3F2-4791-A546-685260815721}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B85B676A-C3F2-4791-A546-685260815721}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B85B676A-C3F2-4791-A546-685260815721}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B85B676A-C3F2-4791-A546-685260815721}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80079B81-85CB-4A72-B198-CCB820C329B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80079B81-85CB-4A72-B198-CCB820C329B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80079B81-85CB-4A72-B198-CCB820C329B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80079B81-85CB-4A72-B198-CCB820C329B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48445152-822A-4D60-BE4C-8213CD412D5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48445152-822A-4D60-BE4C-8213CD412D5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48445152-822A-4D60-BE4C-8213CD412D5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48445152-822A-4D60-BE4C-8213CD412D5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C370B7EB-A400-47DF-946D-52B7B1B23335}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C370B7EB-A400-47DF-946D-52B7B1B23335}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C370B7EB-A400-47DF-946D-52B7B1B23335}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C370B7EB-A400-47DF-946D-52B7B1B23335}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8745FE5-9012-4C52-A2D3-529265B6E9A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8745FE5-9012-4C52-A2D3-529265B6E9A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8745FE5-9012-4C52-A2D3-529265B6E9A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8745FE5-9012-4C52-A2D3-529265B6E9A7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1D70752C-119F-4860-91FC-8475A5740878}
+	EndGlobalSection
+EndGlobal
