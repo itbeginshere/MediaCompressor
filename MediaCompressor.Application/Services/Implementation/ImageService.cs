@@ -1,4 +1,4 @@
-﻿using MediaCompressor.Core.Images;
+﻿using MediaCompressor.Core.Images.Compress;
 using SkiaSharp;
 
 namespace MediaCompressor.Application.Services.Implementation;

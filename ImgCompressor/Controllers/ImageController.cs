@@ -1,5 +1,5 @@
 ﻿using MediaCompressor.Application.Services;
-using MediaCompressor.Core.Images;
+using MediaCompressor.Core.Images.Compress;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MediaCompressor.API.Controllers;
@@ -31,8 +31,15 @@ public class ImageController(IImageService imageService) : ControllerBase
             FileFormat: Path.GetExtension(request.File.FileName).TrimStart('.'),
             FileBytes: fileStream.ToArray());
 
-        byte[] result = _imageService.Compress(data);
+        byte[] compressedImage = _imageService.Compress(data);
 
-        return Ok();
+        var result = File(
+            compressedImage,
+            data.FileFormat,
+            $"compressed_image_{data.FileName}_{DateTime.Now.Ticks}");
+
+        return result;
     }
+
+
 }
