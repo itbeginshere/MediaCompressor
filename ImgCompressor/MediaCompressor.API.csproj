@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MediaCompressor.Application\MediaCompressor.Application.csproj" />
+    <ProjectReference Include="..\MediaCompressor.Core\MediaCompressor.Core.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,5 +1,7 @@
-﻿namespace MediaCompressor.Application.Services;
+﻿using MediaCompressor.Core.Images;
+
+namespace MediaCompressor.Application.Services;
 public interface IImageService
 {
-    Task<object> CompressAsync();
+    byte[] Compress(ImageCompressDto data);
 }
