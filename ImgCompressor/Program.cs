@@ -22,6 +22,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseAuthorization();
 
+app.UseRateLimiter();
+
 app.MapControllers();
 
 app.Run();
