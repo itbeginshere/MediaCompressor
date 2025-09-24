@@ -1,17 +1,20 @@
-﻿using MediaCompressor.Application.Services;
+﻿using MediaCompressor.Application.Helpers;
+using MediaCompressor.Application.Services;
 using MediaCompressor.Core.Images.Compress;
 using MediaCompressor.Core.Images.Resize;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MediaCompressor.API.Controllers;
 
+[ApiController]
+[Route("api/[controller]/[action]")]
 public class ImageController(IImageService imageService) : ControllerBase
 {
     private readonly IImageService _imageService = imageService;
 
     [HttpPost]
     [ActionName("compress")]
-    public async Task<IActionResult> Compress(ImageCompressRequest request)
+    public async Task<IActionResult> Compress([FromForm] ImageCompressRequest request)
     {
         if (request.File is null || request.File.Length == 0)
         {
@@ -36,15 +39,15 @@ public class ImageController(IImageService imageService) : ControllerBase
 
         var result = File(
             compressedImage,
-            data.FileFormat,
-            $"compressed_image_{data.FileName}_{DateTime.Now.Ticks}");
+            MimeTypeHelper.FromFileFormat(data.FileFormat),
+            $"conpressed_image_{DateTime.Now.Ticks}_{request.File.FileName}");
 
         return result;
     }
 
     [HttpPost]
     [ActionName("resize")]
-    public async Task<IActionResult> Resize(ImageResizeRequest request)
+    public async Task<IActionResult> Resize([FromForm] ImageResizeRequest request)
     {
         if (request.File is null || request.File.Length == 0)
         {
@@ -70,8 +73,8 @@ public class ImageController(IImageService imageService) : ControllerBase
 
         var result = File(
             resizedImage,
-            data.FileFormat,
-            $"resized_image_{data.FileName}_{DateTime.Now.Ticks}");
+            MimeTypeHelper.FromFileFormat(data.FileFormat),
+            $"resized_image_{DateTime.Now.Ticks}_{request.File.FileName}");
 
         return result;
     }

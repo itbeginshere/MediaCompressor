@@ -64,9 +64,11 @@ public sealed class ImageService : IImageService
     {
         return format.ToLower() switch
         {
+            "gif" => SKEncodedImageFormat.Gif,
             "webp" => SKEncodedImageFormat.Webp,
             "png" => SKEncodedImageFormat.Png,
             "jpg" => SKEncodedImageFormat.Jpeg,
+            "jpeg" => SKEncodedImageFormat.Jpeg,
             _ => throw new NotSupportedException($"Unsupported image format: {format}.")
         };
     }
