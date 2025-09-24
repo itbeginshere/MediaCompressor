@@ -10,7 +10,7 @@ public sealed class MimeTypeHelper
             "png" => "image/png",
             "jpg" => "image/jpeg",
             "jpeg" => "image/jpeg",
-            _ => throw new NotImplementedException("File format not supported")
+            _ => throw new NotImplementedException("File format not supported.")
         };
     }
 }

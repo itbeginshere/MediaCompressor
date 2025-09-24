@@ -37,7 +37,7 @@ public sealed class ImageService : IImageService
             SKFilterQuality.High);
 
         if (resized == null)
-            throw new Exception("Failed to resize image.");
+            throw new FileLoadException("Failed to resize image.");
 
         var skFormat = GetFileExtension(data.FileFormat);
 
